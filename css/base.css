@@ -1,0 +1,261 @@
+/*背景*/
+body{
+    margin: 0;
+}
+.earth {
+    position: relative;
+    width: 1200px;
+    height: 830px;
+    margin: auto;
+    overflow: hidden;
+    background: rgb(189, 147, 96);
+}
+
+/*按钮*/
+button {
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    background-color: #286090;
+    border-color: transparent;
+    border-radius: 3px;
+    box-shadow: #222 2px 2px;
+    outline: none;
+}
+
+button:hover {
+    background: #204d74;
+}
+
+button:active {
+    margin: 2px 0 0 2px;
+    box-shadow: none;
+}
+
+/*车站*/
+.station {
+    position: absolute;
+    z-index: 1;
+    background-color: var(--dark-place-color);
+}
+
+/*站台*/
+.platform {
+    position: absolute;
+    z-index: 1;
+    width: 11px;
+    height: 150px;
+    background-color: #ddd
+}
+
+.platform.horizontal {
+    width: 150px;
+    height: 11px;
+}
+
+/*区间隧道*/
+.tunnel {
+    position: absolute;
+    z-index: 1;
+    border-width: 7px;
+    border-color: var(--dark-place-color);
+    border-style: solid;
+}
+
+/*转弯半径350米 隧道*/
+.tunnel.turn_350 {
+    width: 350px;
+    height: 350px;
+}
+
+/*转弯半径400米 隧道*/
+.tunnel.turn_400 {
+    width: 400px;
+    height: 400px;
+}
+
+/*转弯半径350米 隧道 右上角*/
+.tunnel.turn_350.top-right {
+    border-radius: 0 350px 0 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+/*转弯半径400米 隧道 左上角*/
+.tunnel.turn_400.top-left {
+    border-radius: 400px 0 0 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.tunnel.vertical {
+    width: 0;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.tunnel.horizontal {
+    height: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+/*轨道*/
+.line {
+    position: absolute;
+    z-index: 2;
+    background-color: black;
+}
+
+.line.horizontal {
+    height: 1px;
+    border-width: 1px 0 0 0;
+}
+
+.line.vertical {
+    width: 1px;
+    border-width: 0 0 0 1px;
+}
+
+/*渡线*/
+.line.vertical.cross_over.left,
+.line.vertical.cross_over.right {
+    transform-origin: top;
+}
+
+/*9号道岔-右上至左下*/
+.line.vertical.cross_over.nine.left {
+    transform: rotateZ(6.33deg)
+}
+
+/*9号道岔-左上至右下*/
+.line.vertical.cross_over.nine.right {
+    transform: rotateZ(-6.33deg)
+}
+
+/*7号道岔-右上至左下*/
+.line.vertical.cross_over.seven.left {
+    transform: rotateZ(var(--cross-over-seven))
+}
+
+/*7号道岔-左上至右下*/
+.line.vertical.cross_over.seven.right {
+    transform: rotateZ(var(--cross-over-seven-neg))
+}
+
+/*曲线 R=350米*/
+.line.turn_350 {
+    border-width: 1px;
+    width: 348px;
+    height: 348px;
+    background: transparent;
+    border-style: solid;
+}
+
+/*曲线 R=350米 右上角*/
+.line.turn_350.top-right {
+    border-radius: 0 348px 0 0;
+    border-left: none;
+    border-bottom: none;
+}
+
+/*曲线 R=400米*/
+.line.turn_400 {
+    border-width: 1px;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border-style: solid;
+}
+
+/*曲线 R=400米 左上角*/
+.line.turn_400.top-left {
+    border-radius: 400px 0 0 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+/*列车*/
+.train {
+    position: absolute;
+    z-index: 3;
+}
+
+/*A型车-总长138米*/
+.train.type_a {
+    height: 138px;
+    width: 3px;
+}
+
+/*A型车车厢-长23米,宽3米*/
+.train.type_a > .car {
+    position: relative;
+    width: 3px;
+    height: 23px;
+    border-radius: 1px;
+    background: var(--line-two-color);
+    transform-origin: bottom;
+    transform: rotate(0deg);
+}
+
+/*车灯*/
+.train > .light{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 3px;
+    transform: rotate(45deg);
+    transform-origin: 5px 0;
+    overflow: hidden;
+}
+
+/*车灯投射*/
+.train > .light > .shadow {
+    position: relative;
+    top: -2px;
+    left: -2px;
+    width: 11px;
+    height: 11px;
+    background: linear-gradient(135deg, yellow, transparent);
+    transform-origin: 0 0;
+    transform: skew(28deg, 28deg) rotateZ(0deg);
+    border-radius: 0 0 14px 0;
+}
+
+/*车头显示屏*/
+.train > .label {
+    position: absolute;
+    z-index: 4;
+    width: 54px;
+    height: 16px;
+    background: #fff;
+    top: 126px;
+    left: -58px;
+    border-radius: 3px;
+    box-shadow: #444 1px 1px 2px;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    user-select: none;
+}
+
+/*换向车辆*/
+.train.reversed > .light {
+    top: -138px;
+    transform: rotate(225deg);
+    transform-origin: 1px 0;
+}
+
+.train.reversed > .label {
+    top: 0;
+}
+
+/*动画暂停*/
+.animation-paused,
+.animation-paused * {
+    animation-play-state: paused !important;
+    -webkit-animation-play-state: paused !important;
+}

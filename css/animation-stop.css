@@ -1,0 +1,37 @@
+/*停车动画*/
+.animation-down-stop {
+    animation: down-stop calc(var(--stop-time) / var(--play-speed)) forwards;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/*动画帧*/
+@keyframes down-stop {
+    0% {
+        top: 475px
+    }
+    100% {
+        top: 645px
+    }
+}
+
+.train.after_stop {
+    top: 645px;
+    transform: rotateZ(0deg);
+}
+
+.west_outer_train.after_stop {
+    left: 952px;
+}
+
+.west_inner_train.after_stop {
+    left: 966px;
+}
+
+.west_inner_train.after_stop > .car {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+.west_inner_train.after_stop > .light {
+    left: 0;
+}

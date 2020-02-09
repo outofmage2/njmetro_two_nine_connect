@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>南京地铁2-9接驳线</title>
+    <link href="css/base.css" rel="stylesheet"/>
+    <link href="css/elements.css" rel="stylesheet"/>
+    <link href="css/timetable.css" rel="stylesheet"/>
+    <link href="css/animation-stop.css" rel="stylesheet"/>
+    <link href="css/animation-enter-station.css" rel="stylesheet"/>
+    <link href="css/animation-turning.css" rel="stylesheet"/>
+    <link href="css/animation-enter-turn.css" rel="stylesheet"/>
+    <link href="css/animation-depart-platform.css" rel="stylesheet"/>
+    <link href="css/animation-cross.css" rel="stylesheet"/>
+    <style>
+        :root {
+            --dark-place-color: #687078;
+            --cross-over-seven: 8.13deg;
+            --cross-over-seven-neg: -8.13deg;
+            --cross-over-nine: -6.33deg;
+            --cross-over-nine-neg: -6.33deg;
+            --line-two-color: rgb(199, 0, 63);
+            --play-speed: 5.0;
+
+            --depart-acc-time: 27.778s;
+            --depart-steady-time: 11.109s;
+            --start-turn-time: 8.28s;
+            --turn-complete-time: 8.28s;
+            --turning-time: 24.9s;
+            --turn-slow-time: 30.0s;
+            --stop-time: 20s;
+            --cross-time: 55s;
+            --turning-acc-time: 35s;
+        }
+    </style>
+    <script>
+
+    </script>
+    <script src="js/clock.js" type="text/javascript"></script>
+    <script src="js/timetable.js" type="text/javascript"></script>
+    <script src="js/animation-executor.js" type="text/javascript"></script>
+    <script src="js/animation-data.js" type="text/javascript"></script>
+    <script src="js/train-animation-builder.js" type="text/javascript"></script>
+    <script src="js/train-animation-timeline.js" type="text/javascript"></script>
+    <script src="js/train-animation.js" type="text/javascript"></script>
+    <script src="js/train-animation-player.js" type="text/javascript"></script>
+    <script src="js/controllers.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="earth">
+    <!--时钟-->
+    <div id="clock_panel">
+        <div class="label">当前时间</div>
+        <div id=clock></div>
+    </div>
+    <!--播放速度-->
+    <div id="play_speed_panel">
+        <div class="label">播放速度</div>
+        <div class="speed">
+            <button class="slower" onclick="slower()">
+                <i class="icon"></i>
+            </button>
+            <span id="speed_label">×5倍</span>
+            <button class="faster" onclick="faster()">
+                <i class="icon"></i>
+            </button>
+        </div>
+    </div>
+    <!--控制按钮-->
+    <div id="buttons">
+        <button class="play" onclick="play()">播放
+            <i class="icon"></i>
+        </button>
+        <button class="reset" onclick="reset()">重置
+            <i class="icon"></i>
+        </button>
+        <button class="pause" onclick="pause()">暂停
+            <i class="icon"></i>
+        </button>
+    </div>
+    <div id="time_table_panel">
+        <table id="outer_platform_timetable">
+            <thead>
+            <tr>
+                <th colspan="4">集庆门大街西外侧站台</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>开往</th>
+                <th colspan="2">时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="red">
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:00:00</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:00:40</td>
+            </tr>
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:02:10</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:02:50</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:04:20</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:05:00</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:06:30</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:07:10</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:08:40</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:09:20</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:10:50</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:11:30</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:13:00</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:13:40</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:15:10</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:15:50</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:17:20</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:18:00</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:19:30</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:20:10</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:21:40</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:22:20</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:23:50</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:24:30</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:26:00</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:26:40</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:28:10</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:28:50</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:30:20</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:31:00</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">鱼嘴</td>
+                <td>到</td>
+                <td>8:32:30</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:33:10</td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="inner_platform_timetable">
+            <thead>
+            <tr>
+                <th colspan="4">集庆门大街西内侧站台</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>开往</th>
+                <th colspan="2">时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td rowspan="2">&nbsp;</td>
+                <td rowspan="2">&nbsp;</td>
+                <td rowspan="2" colspan="2">&nbsp;</td>
+            </tr>
+            <tr></tr>
+
+            <tr class="red">
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">水西门大街</td>
+                <td>到</td>
+                <td>8:01:40</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:04:10</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4" colspan="2">&nbsp;</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">水西门大街</td>
+                <td>到</td>
+                <td>8:08:10</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:10:40</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4" colspan="2">&nbsp;</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">水西门大街</td>
+                <td>到</td>
+                <td>8:14:40</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:17:10</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4" colspan="2">&nbsp;</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">水西门大街</td>
+                <td>到</td>
+                <td>8:21:10</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:23:40</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4" colspan="2">&nbsp;</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td rowspan="2">下一趟</td>
+                <td rowspan="2">水西门大街</td>
+                <td>到</td>
+                <td>8:27:40</td>
+            </tr>
+            <tr>
+                <td>发</td>
+                <td>8:30:10</td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4">&nbsp;</td>
+                <td rowspan="4" colspan="2">&nbsp;</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--集-水区间隧道-->
+    <div id="two_nine_whole" class="station"></div>
+    <div id="two_nine_connect" class="tunnel turn_350 top-right">
+        <div id="connect_curve_line" class="line turn_350 top-right"></div>
+    </div>
+    <div id="two_nine_connect_horizontal" class="tunnel horizontal">
+        <div id="connect_straight_line" class="line horizontal"></div>
+    </div>
+
+    <!--集-茶区间隧道-->
+    <div id="two_up_left" class="tunnel turn_400 top-left">
+        <div id="line_two_up_left" class="line turn_400 top-left"></div>
+    </div>
+    <div id="two_up_right" class="tunnel turn_400 top-left">
+        <div id="line_two_up_right" class="line turn_400 top-left"></div>
+    </div>
+    <div id="two_up_whole" class="station"></div>
+
+    <!--集庆门大街站-->
+    <div id="station_jqm" class="station">
+        <div class="label">集庆门大街站</div>
+        <div id="north_west_well" class="station"></div>
+        <div id="north_east_well" class="station"></div>
+        <div id="south_west_well" class="station"></div>
+        <div id="south_east_well" class="station"></div>
+        <div id="west_line_extra" class="tunnel vertical"></div>
+        <div id="east_line_extra" class="tunnel vertical"></div>
+
+        <div id="west_platform" class="platform"></div>
+        <div id="east_platform" class="platform"></div>
+
+        <div id="west_outer_line" class="line vertical"></div>
+        <div id="west_inner_line" class="line vertical"></div>
+        <div id="park_line" class="line vertical"></div>
+        <div id="east_inner_line" class="line vertical"></div>
+        <div id="east_outer_line" class="line vertical"></div>
+
+        <div id="west_cross_over_left" class="line vertical cross_over left seven"></div>
+        <div id="west_cross_over_right" class="line vertical cross_over right seven"></div>
+        <div id="park_cross_over_left" class="line vertical cross_over left seven"></div>
+        <div id="park_cross_over_right" class="line vertical cross_over right seven"></div>
+        <div id="east_cross_over_right" class="line vertical cross_over right seven"></div>
+    </div>
+
+    <!--水西门大街站-->
+    <div id="station_sxm" class="station">
+        <div class="label">水西门大街站</div>
+        <div id="north_platform" class="platform horizontal"></div>
+        <div id="south_platform" class="platform horizontal"></div>
+
+        <div id="connect_line" class="line horizontal"></div>
+    </div>
+
+    <!--列车-->
+    <div id="train_one" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+
+    <div id="train_two"
+         class="train type_a west_outer_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+
+    <div id="train_three" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">水西门大街</div>
+    </div>
+
+    <div id="train_four" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+
+    <div id="train_five" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+
+    <div id="train_six" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">水西门大街</div>
+    </div>
+
+    <div id="train_seven" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+
+    <div id="train_eight" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+    <div id="train_nine" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">水西门大街</div>
+    </div>
+    <div id="train_ten" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+    <div id="train_eleven" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+    <div id="train_twelve" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">水西门大街</div>
+    </div>
+    <div id="train_thirteen" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+    <div id="train_fourteen" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+    <div id="train_fifteen" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">水西门大街</div>
+    </div>
+    <div id="train_sixteen" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+    <div id="train_seventeen" class="train type_a west_inner_train">
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="car"></div>
+        <div class="light">
+            <div class="shadow"></div>
+        </div>
+        <div class="label">鱼嘴</div>
+    </div>
+</div>
+
+</body>
+
+</html>

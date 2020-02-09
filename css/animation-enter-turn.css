@@ -1,0 +1,728 @@
+/*西外侧列车水西门大街-集庆门大街进入转弯动画及定格样式*/
+
+/*进入弯道-动画*/
+.west_outer_train.animation-connect-line-down-enter-turn {
+    animation: connect-line-down-enter-turn calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-enter-turn > .car:nth-child(1) {
+    animation: connect-line-down-enter-turn-car-one calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-enter-turn > .car:nth-child(2) {
+    animation: connect-line-down-enter-turn-car-two calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-enter-turn > .car:nth-child(3) {
+    animation: connect-line-down-enter-turn-car-three calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-enter-turn > .car:nth-child(4) {
+    animation: connect-line-down-enter-turn-car-four calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-enter-turn > .car:nth-child(5) {
+    animation: connect-line-down-enter-turn-car-five calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-enter-turn > .car:nth-child(6) {
+    animation: connect-line-down-enter-turn-car-six calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-enter-turn > .light:nth-child(7) {
+    animation: connect-line-down-enter-turn-light calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+/*动画帧-列车*/
+@keyframes connect-line-down-enter-turn {
+    0% {
+        transform: rotateZ(-90deg)
+    }
+    16.67% {
+        transform: rotateZ(-86.23deg)
+    }
+    33.33% {
+        transform: rotateZ(-82.47deg)
+    }
+    50% {
+        transform: rotateZ(-78.7deg)
+    }
+    66.67% {
+        transform: rotateZ(-74.93deg)
+    }
+    83.33% {
+        transform: rotateZ(-71.17deg)
+    }
+    100% {
+        transform: rotateZ(-67.4deg)
+    }
+}
+
+@keyframes connect-line-down-enter-turn-car-one {
+    0% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    16.67% {
+        transform: rotateZ(-3.77deg);
+        left: -7px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-8deg);
+        left: -11px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-12deg);
+        left: -15px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-15deg);
+        left: -18px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-18deg);
+        left: -19px;
+        top: 1px;
+    }
+    100% {
+        transform: rotateZ(-21deg);
+        left: -18px;
+        top: 1px;
+    }
+}
+
+@keyframes connect-line-down-enter-turn-car-two {
+    0% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    16.67% {
+        transform: rotateZ(-3.77deg);
+        left: -5px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-8deg);
+        left: -8px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-11deg);
+        left: -11px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-14deg);
+        left: -12px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-17deg);
+        left: -12px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(-17.5deg);
+        left: -11px;
+    }
+}
+
+@keyframes connect-line-down-enter-turn-car-three {
+    0% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    16.67% {
+        transform: rotateZ(-3.77deg);
+        left: -3.5px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-8deg);
+        left: -6px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-11deg);
+        left: -6px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-14deg);
+        left: -6px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-13deg);
+        left: -6px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(-14deg);
+        left: -5.5px;
+    }
+}
+
+@keyframes connect-line-down-enter-turn-car-four {
+    0% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    16.67% {
+        transform: rotateZ(-3.77deg);
+        left: -2px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-8deg);
+        left: -2.5px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-9deg);
+        left: -2.5px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-9deg);
+        left: -2px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-9deg);
+        left: -2px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(-10deg);
+        left: -1px;
+    }
+}
+
+@keyframes connect-line-down-enter-turn-car-five {
+    0% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    16.67% {
+        transform: rotateZ(-3.77deg);
+        left: -0.5px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-5.5deg);
+        left: -0.5px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-6deg);
+        left: 0;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-5deg);
+        left: 0;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-4deg);
+        left: 0;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(-6deg);
+        left: 1px;
+    }
+}
+
+@keyframes connect-line-down-enter-turn-car-six {
+    0% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    16.67% {
+        transform: rotateZ(-0.33deg);
+        left: 0;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-0.66deg);
+        left: 0;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-1deg);
+        left: 1px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-1.33deg);
+        left: 1px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-1.66deg);
+        left: 1px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(-2deg);
+        left: 2px;
+    }
+}
+
+@keyframes connect-line-down-enter-turn-light {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 2px;
+    }
+}
+
+/*进入转弯后*/
+.west_outer_train.after_enter_turn {
+    left: 952px;
+    transform-origin: -352.5px 138px;
+    transform: rotateZ(-67.4deg);
+}
+
+.west_outer_train.after_enter_turn > .car:nth-child(1) {
+    transform: rotateZ(-21deg);
+    left: -18px;
+    top: 1px;
+}
+
+.west_outer_train.after_enter_turn > .car:nth-child(2) {
+    transform: rotateZ(-17.5deg);
+    left: -11px;
+}
+
+.west_outer_train.after_enter_turn > .car:nth-child(3) {
+    transform: rotateZ(-14deg);
+    left: -5.5px;
+}
+
+.west_outer_train.after_enter_turn > .car:nth-child(4) {
+    transform: rotateZ(-10deg);
+    left: -1px;
+}
+
+.west_outer_train.after_enter_turn > .car:nth-child(5) {
+    transform: rotateZ(-6deg);
+    left: 1px;
+}
+
+.west_outer_train.after_enter_turn > .car:nth-child(6) {
+    transform: rotateZ(-2deg);
+    left: 2px;
+}
+
+.west_outer_train.after_enter_turn > .light:nth-child(7) {
+    left: 2px;
+}
+
+/*西外侧列车集庆门大街-水西门大街离开转弯动画及定格样式*/
+
+/*离开弯道-动画*/
+.west_inner_train.reversed.animation-connect-line-up-leave-turn {
+    animation: connect-line-up-leave-turn calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .car:nth-child(1) {
+    animation: connect-line-up-leave-turn-car-one calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .car:nth-child(2) {
+    animation: connect-line-up-leave-turn-car-two calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .car:nth-child(3) {
+    animation: connect-line-up-leave-turn-car-three calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .car:nth-child(4) {
+    animation: connect-line-up-leave-turn-car-four calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .car:nth-child(5) {
+    animation: connect-line-up-leave-turn-car-five calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .car:nth-child(6) {
+    animation: connect-line-up-leave-turn-car-six calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .light:nth-child(7) {
+    animation: connect-line-up-leave-turn-light calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.reversed.animation-connect-line-up-leave-turn > .label:nth-child(8) {
+    animation: connect-line-up-leave-turn-label calc(var(--start-turn-time) / var(--play-speed)) linear forwards
+}
+
+/*动画帧-列车*/
+@keyframes connect-line-up-leave-turn {
+    0% {
+        transform: rotateZ(-67.4deg);
+        transform-origin: -352px 138px;
+    }
+    16.67% {
+        transform: rotateZ(-71.17deg);
+        transform-origin: -352px 138px;
+    }
+    33.33% {
+        transform: rotateZ(-74.93deg);
+        transform-origin: -352px 138px;
+    }
+    50% {
+        transform: rotateZ(-78.7deg);
+        transform-origin: -352px 138px;
+    }
+    66.67% {
+        transform: rotateZ(-82.47deg);
+        transform-origin: -352px 138px;
+    }
+    83.33% {
+        transform: rotateZ(-86.23deg);
+        transform-origin: -352px 138px;
+    }
+    100% {
+        transform: rotateZ(-90deg);
+        transform-origin: -352px 138px;
+        top: 339px;
+    }
+}
+
+@keyframes connect-line-up-leave-turn-car-one {
+    0% {
+        transform: rotateZ(-21deg);
+        left: -18px;
+        top: 1px;
+    }
+    16.67% {
+        transform: rotateZ(-18deg);
+        left: -19px;
+        top: 1px;
+    }
+    33.33% {
+        transform: rotateZ(-15deg);
+        left: -18px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-12deg);
+        left: -15px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-8deg);
+        left: -11px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-3.77deg);
+        left: -7px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes connect-line-up-leave-turn-car-two {
+    0% {
+        transform: rotateZ(-17.5deg);
+        left: -11px;
+    }
+    16.67% {
+        transform: rotateZ(-17deg);
+        left: -12px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-14deg);
+        left: -12px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-11deg);
+        left: -11px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-8deg);
+        left: -8px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-3.77deg);
+        left: -5px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes connect-line-up-leave-turn-car-three {
+    0% {
+        transform: rotateZ(-14deg);
+        left: -5.5px;
+    }
+    16.67% {
+        transform: rotateZ(-13deg);
+        left: -6px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-14deg);
+        left: -6px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-11deg);
+        left: -6px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-8deg);
+        left: -6px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-3.77deg);
+        left: -3.5px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes connect-line-up-leave-turn-car-four {
+    0% {
+        transform: rotateZ(-10deg);
+        left: -1px;
+    }
+    16.67% {
+        transform: rotateZ(-9deg);
+        left: -2px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-9deg);
+        left: -2px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-9deg);
+        left: -2.5px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-8deg);
+        left: -2.5px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-3.77deg);
+        left: -2px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes connect-line-up-leave-turn-car-five {
+    0% {
+        transform: rotateZ(-6deg);
+        left: 1px;
+    }
+    16.67% {
+        transform: rotateZ(-4deg);
+        left: 0;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-5deg);
+        left: 0;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-6deg);
+        left: 0;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-5.5deg);
+        left: -0.5px;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-3.77deg);
+        left: -0.5px;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes connect-line-up-leave-turn-car-six {
+    0% {
+        transform: rotateZ(-2deg);
+        left: 2px;
+    }
+    16.67% {
+        transform: rotateZ(-1.66deg);
+        left: 1px;
+        top: 0;
+    }
+    33.33% {
+        transform: rotateZ(-1.33deg);
+        left: 1px;
+        top: 0;
+    }
+    50% {
+        transform: rotateZ(-1deg);
+        left: 1px;
+        top: 0;
+    }
+    66.67% {
+        transform: rotateZ(-0.66deg);
+        left: 0;
+        top: 0;
+    }
+    83.33% {
+        transform: rotateZ(-0.33deg);
+        left: 0;
+        top: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes connect-line-up-leave-turn-light {
+    0% {
+        left: -26px;
+        top: -136px;
+        transform: rotate(204deg);
+    }
+    16.67% {
+        left: -26px;
+        transform: rotate(207deg);
+    }
+    33.33% {
+        left: -24px;
+        transform: rotate(210deg);
+    }
+    50% {
+        left: -20px;
+        transform: rotate(213deg);
+    }
+    66.67% {
+        left: -15px;
+        transform: rotate(217deg);
+    }
+    83.33% {
+        left: -9px;
+        transform: rotate(221deg);
+    }
+    100% {
+        left: 0;
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes connect-line-up-leave-turn-label {
+    0% {
+        left: -16px;
+        top: -14px;
+        transform: rotate(-21deg);
+    }
+    100% {
+        left: 7px;
+        top: 0;
+        transform: rotate(0deg);
+    }
+}
+
+.west_inner_train.reversed.after_leave_turn {
+    transform: rotateZ(-90deg);
+    transform-origin: -352px 138px;
+    top: 339px;
+    left: 952px;
+}
+
+.west_inner_train.reversed.after_leave_turn > .car:nth-child(1) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_leave_turn > .car:nth-child(2) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_leave_turn > .car:nth-child(3) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_leave_turn > .car:nth-child(4) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_leave_turn > .car:nth-child(5) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_leave_turn > .car:nth-child(6) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_leave_turn > .light:nth-child(7) {
+    left: 0;
+    top: -138px;
+    transform: rotate(225deg);
+}
+
+.west_inner_train.reversed.after_leave_turn > .label:nth-child(8) {
+    left: 7px;
+    top: 0;
+    transform: rotate(0deg);
+}

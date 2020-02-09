@@ -1,0 +1,414 @@
+/*西外侧列车水西门大街-集庆门大街转弯动画及定格样式*/
+
+/*转弯动画*/
+.west_outer_train.animation-connect-line-down-turning {
+    animation: connect-line-down-turning calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-turning > .car:nth-child(1) {
+    animation: connect-line-down-turning-car-one calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-turning > .car:nth-child(2) {
+    animation: connect-line-down-turning-car-two calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-turning > .car:nth-child(3) {
+    animation: connect-line-down-turning-car-three calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-turning > .car:nth-child(4) {
+    animation: connect-line-down-turning-car-four calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-turning > .car:nth-child(5) {
+    animation: connect-line-down-turning-car-five calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-turning > .car:nth-child(6) {
+    animation: connect-line-down-turning-car-six calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_outer_train.animation-connect-line-down-turning > .light:nth-child(7) {
+    animation: connect-line-down-turning-light calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+/*动画帧-列车*/
+@keyframes connect-line-down-turning {
+    0% {
+        transform: rotateZ(-67.4deg)
+    }
+    100% {
+        transform: rotateZ(0deg)
+    }
+}
+
+/*动画帧-一号车厢*/
+@keyframes connect-line-down-turning-car-one {
+    0% {
+        transform: rotateZ(-21deg);
+        left: -18px;
+        top: 1px;
+    }
+    100% {
+        transform: rotateZ(-21deg);
+        left: -17px;
+        top: 1px;
+    }
+}
+
+/*动画帧-二号车厢*/
+@keyframes connect-line-down-turning-car-two {
+    0% {
+        transform: rotateZ(-17.5deg);
+        left: -11px;
+    }
+    100% {
+        transform: rotateZ(-16.5deg);
+        left: -10px;
+    }
+}
+
+/*动画帧-三号车厢*/
+@keyframes connect-line-down-turning-car-three {
+    0% {
+        transform: rotateZ(-14deg);
+        left: -5.5px;
+    }
+    100% {
+        transform: rotateZ(-12deg);
+        left: -5.5px;
+    }
+}
+
+/*动画帧-四号车厢*/
+@keyframes connect-line-down-turning-car-four {
+    0% {
+        transform: rotateZ(-10deg);
+        left: -1px;
+    }
+    100% {
+        transform: rotateZ(-8deg);
+        left: -2px;
+    }
+}
+
+/*动画帧-五号车厢*/
+@keyframes connect-line-down-turning-car-five {
+    0% {
+        transform: rotateZ(-6deg);
+        left: 1px;
+    }
+    100% {
+        transform: rotateZ(-5deg);
+        left: 0;
+    }
+}
+
+/*动画帧-六号车厢*/
+@keyframes connect-line-down-turning-car-six {
+    0% {
+        transform: rotateZ(-2deg);
+        left: 2px;
+    }
+    100% {
+        transform: rotateZ(0.5deg);
+        left: 0;
+    }
+}
+
+/*动画帧-前灯*/
+@keyframes connect-line-down-turning-light {
+    0% {
+        left: 2px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/*转弯后定格*/
+.west_outer_train.after_turning {
+    top: 339px;
+    left: 952px;
+    transform: rotateZ(0deg);
+}
+
+.west_outer_train.after_turning > .car:nth-child(1) {
+    transform: rotateZ(-21deg);
+    left: -17px;
+    top: 1px;
+}
+
+.west_outer_train.after_turning > .car:nth-child(2) {
+    transform: rotateZ(-16.5deg);
+    left: -10px;
+}
+
+.west_outer_train.after_turning > .car:nth-child(3) {
+    transform: rotateZ(-12deg);
+    left: -5.5px;
+}
+
+.west_outer_train.after_turning > .car:nth-child(4) {
+    transform: rotateZ(-8deg);
+    left: -2px;
+}
+
+.west_outer_train.after_turning > .car:nth-child(5) {
+    transform: rotateZ(-5deg);
+    left: -0.5px;
+}
+
+.west_outer_train.after_turning > .car:nth-child(6) {
+    transform: rotateZ(0.5deg);
+}
+
+/*西外侧列车集庆门大街-水西门大街转弯动画及定格样式*/
+
+/*转弯动画*/
+.west_inner_train.reversed.animation-connect-line-up-turning {
+    animation: connect-line-up-turning calc(var(--turn-slow-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.animation-connect-line-up-turning > .car:nth-child(1) {
+    animation: connect-line-up-turning-car-one calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.animation-connect-line-up-turning > .car:nth-child(2) {
+    animation: connect-line-up-turning-car-two calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.animation-connect-line-up-turning > .car:nth-child(3) {
+    animation: connect-line-up-turning-car-three calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.animation-connect-line-up-turning > .car:nth-child(4) {
+    animation: connect-line-up-turning-car-four calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.animation-connect-line-up-turning > .car:nth-child(5) {
+    animation: connect-line-up-turning-car-five calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.animation-connect-line-up-turning > .car:nth-child(6) {
+    animation: connect-line-up-turning-car-six calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+.west_inner_train.animation-connect-line-up-turning > .light:nth-child(7) {
+    animation: connect-line-up-turning-light calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+/*动画帧-列车*/
+@keyframes connect-line-up-turning {
+    0% {
+        top: 339px;
+        transform: rotateZ(0deg);
+        transform-origin: -352px 138px;
+        animation-timing-function: cubic-bezier(0.255, 0.11, 0.465, 0.295);
+    }
+    43.8% {
+        top: 339px;
+        transform: rotateZ(-24.55deg);
+        transform-origin: -352px 138px;
+        animation-timing-function: linear;
+    }
+    100% {
+        top: 339px;
+        transform: rotateZ(-67.4deg);
+        transform-origin: -352px 138px;
+    }
+}
+
+/*动画帧-一号车厢*/
+@keyframes connect-line-up-turning-car-one {
+    0% {
+        transform: rotateZ(-21deg);
+        left: -17px;
+        top: 1px;
+    }
+    100% {
+        transform: rotateZ(-21deg);
+        left: -18px;
+        top: 1px;
+    }
+}
+
+/*动画帧-二号车厢*/
+@keyframes connect-line-up-turning-car-two {
+    0% {
+        transform: rotateZ(-16.5deg);
+        left: -10px;
+    }
+    100% {
+        transform: rotateZ(-17.5deg);
+        left: -11px;
+    }
+}
+
+/*动画帧-三号车厢*/
+@keyframes connect-line-up-turning-car-three {
+    0% {
+        transform: rotateZ(-12deg);
+        left: -5.5px;
+    }
+    100% {
+        transform: rotateZ(-14deg);
+        left: -5.5px;
+    }
+}
+
+/*动画帧-四号车厢*/
+@keyframes connect-line-up-turning-car-four {
+    0% {
+        transform: rotateZ(-8deg);
+        left: -2px;
+    }
+    100% {
+        transform: rotateZ(-10deg);
+        left: -1px;
+    }
+}
+
+/*动画帧-五号车厢*/
+@keyframes connect-line-up-turning-car-five {
+    0% {
+        transform: rotateZ(-5deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(-6deg);
+        left: 1px;
+    }
+}
+
+/*动画帧-六号车厢*/
+@keyframes connect-line-up-turning-car-six {
+    0% {
+        transform: rotateZ(-1deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(-2deg);
+        left: 2px;
+    }
+}
+
+/*动画帧-前灯*/
+@keyframes connect-line-up-turning-light {
+    0% {
+        left: -26px;
+        top: -136px;
+        transform: rotate(204deg);
+    }
+    100% {
+        left: -26px;
+        top: -136px;
+        transform: rotate(204deg);
+    }
+}
+
+/*转弯后定格*/
+.west_inner_train.reversed.after_turning {
+    transform: rotateZ(-67.4deg);
+    transform-origin: -352px 138px;
+    top: 339px;
+}
+
+.west_inner_train.reversed.after_turning > .car:nth-child(1) {
+    left: -18px;
+    top: 1px;
+    transform: rotate(-21deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.reversed.after_turning > .car:nth-child(2) {
+    left: -11px;
+    transform: rotate(-17.5deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.reversed.after_turning > .car:nth-child(3) {
+    left: -5.5px;
+    transform: rotate(-14deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.reversed.after_turning > .car:nth-child(4) {
+    left: -1px;
+    transform: rotate(-10deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.reversed.after_turning > .car:nth-child(5) {
+    left: 1px;
+    transform: rotate(-6deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.reversed.after_turning > .car:nth-child(6) {
+    left: 2px;
+    transform: rotate(-2deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.reversed.after_turning > .light:nth-child(7) {
+    left: -26px;
+    top: -136px;
+    transform: rotate(204deg);
+}
+
+.west_inner_train.reversed.after_turning > .label:nth-child(8) {
+    left: -16px;
+    top: -14px;
+    transform: rotate(-21deg);
+}
+
+/*西内侧列车茶亭-集庆门大街转弯动画及定格样式*/
+
+/*转弯动画*/
+.west_inner_train.animation-line-two-down-turning {
+    animation: line-two-down-turning calc(var(--turning-time) / var(--play-speed)) linear forwards
+}
+
+/*动画帧*/
+@keyframes line-two-down-turning {
+    0% {
+        transform: rotateZ(65deg);
+        transform-origin: 423.5px 138px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: 423.5px 138px;
+    }
+}
+
+/*转弯后定格*/
+.west_inner_train.after_turning {
+    transform: rotateZ(0deg);
+    transform-origin: 423.5px 138px;
+}
+
+/*西内侧列车茶亭-集庆门大街转弯减速动画及定格样式*/
+
+/*转弯减速动画*/
+.west_inner_train.animation-line-two-down-slow-turning {
+    animation: line-two-down-slow-turning calc(var(--turn-slow-time) / var(--play-speed)) forwards
+}
+
+@keyframes line-two-down-slow-turning {
+    0% {
+        transform: rotateZ(65deg);
+        transform-origin: 423.5px 138px;
+        animation-timing-function: linear;
+    }
+    53.33% {
+        transform: rotateZ(30deg);
+        transform-origin: 423.5px 138px;
+        animation-timing-function: cubic-bezier(0.535, 0.705, 0.745, 0.890);
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: 423.5px 138px;
+    }
+}

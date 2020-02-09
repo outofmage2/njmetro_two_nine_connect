@@ -1,0 +1,550 @@
+/*西外侧列车进集庆门大街站动画及定格样式*/
+
+/*进站动画*/
+.west_outer_train.animation-connect-line-down-enter-station {
+    animation: connect-line-down-enter-station calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_outer_train.animation-connect-line-down-enter-station > .car:nth-child(1) {
+    animation: connect-line-down-enter-station-car-one calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_outer_train.animation-connect-line-down-enter-station > .car:nth-child(2) {
+    animation: connect-line-down-enter-station-car-two calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_outer_train.animation-connect-line-down-enter-station > .car:nth-child(3) {
+    animation: connect-line-down-enter-station-car-three calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_outer_train.animation-connect-line-down-enter-station > .car:nth-child(4) {
+    animation: connect-line-down-enter-station-car-four calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_outer_train.animation-connect-line-down-enter-station > .car:nth-child(5) {
+    animation: connect-line-down-enter-station-car-five calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_outer_train.animation-connect-line-down-enter-station > .car:nth-child(6) {
+    animation: connect-line-down-enter-station-car-six calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+/*动画帧-列车*/
+@keyframes connect-line-down-enter-station {
+    0% {
+        top: 339px;
+    }
+    16.67% {
+        top: 362px;
+    }
+    33.33% {
+        top: 385px;
+    }
+    50% {
+        top: 408px;
+    }
+    66.67% {
+        top: 431px;
+    }
+    83.33% {
+        top: 452px;
+    }
+    100% {
+        top: 475px;
+    }
+}
+
+/*动画帧-一号车厢*/
+@keyframes connect-line-down-enter-station-car-one {
+    0% {
+        transform: rotateZ(-21deg);
+        left: -17px;
+        top: 1px;
+    }
+    16.67% {
+        transform: rotateZ(-16.5deg);
+        left: -10px;
+    }
+    33.33% {
+        transform: rotateZ(-12deg);
+        left: -5.5px;
+    }
+    50% {
+        transform: rotateZ(-8deg);
+        left: -2px;
+    }
+    66.67% {
+        transform: rotateZ(-5deg);
+        left: -0.5px;
+    }
+    83.33% {
+        transform: rotateZ(0.5deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-二号车厢*/
+@keyframes connect-line-down-enter-station-car-two {
+    0% {
+        transform: rotateZ(-16.5deg);
+        left: -10px;
+    }
+    16.67% {
+        transform: rotateZ(-12deg);
+        left: -5.5px;
+    }
+    33.33% {
+        transform: rotateZ(-8deg);
+        left: -2px;
+    }
+    50% {
+        transform: rotateZ(-5deg);
+        left: -0.5px;
+    }
+    66.67% {
+        transform: rotateZ(0.5deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-三号车厢*/
+@keyframes connect-line-down-enter-station-car-three {
+    0% {
+        transform: rotateZ(-12deg);
+        left: -5.5px;
+    }
+    16.67% {
+        transform: rotateZ(-8deg);
+        left: -2px;
+    }
+    33.33% {
+        transform: rotateZ(-5deg);
+        left: -0.5px;
+    }
+    50% {
+        transform: rotateZ(0.5deg);
+        left: 0;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-四号车厢*/
+@keyframes connect-line-down-enter-station-car-four {
+    0% {
+        transform: rotateZ(-8deg);
+        left: -2px;
+    }
+    16.67% {
+        transform: rotateZ(-5deg);
+        left: -0.5px;
+    }
+    33.33% {
+        transform: rotateZ(0.5deg);
+        left: 0;
+    }
+    50% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-五号车厢*/
+@keyframes connect-line-down-enter-station-car-five {
+    0% {
+        transform: rotateZ(-5deg);
+        left: 0;
+    }
+    16.67% {
+        transform: rotateZ(0.5deg);
+        left: 0;
+    }
+    33.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    50% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-六号车厢*/
+@keyframes connect-line-down-enter-station-car-six {
+    0% {
+        transform: rotateZ(0.5deg);
+        left: 0;
+    }
+    16.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    33.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    50% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+.west_outer_train.after_enter_station {
+    transform: rotateZ(0deg);
+    top: 475px;
+    left: 952px;
+}
+
+.west_outer_train.after_enter_station > .car{
+    transform: rotateZ(0deg) ;
+    left: 0;
+    top: 0;
+}
+
+/*西内侧列车进集庆门大街站动画及定格样式*/
+
+/*进站动画*/
+.west_inner_train.animation-line-two-down-enter-station {
+    animation: line-two-down-enter-station calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-line-two-down-enter-station > .car:nth-child(1) {
+    animation: line-two-down-enter-station-car-one calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-line-two-down-enter-station > .car:nth-child(2) {
+    animation: line-two-down-enter-station-car-two calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-line-two-down-enter-station > .car:nth-child(3) {
+    animation: line-two-down-enter-station-car-three calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-line-two-down-enter-station > .car:nth-child(4) {
+    animation: line-two-down-enter-station-car-four calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-line-two-down-enter-station > .car:nth-child(5) {
+    animation: line-two-down-enter-station-car-five calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-line-two-down-enter-station > .car:nth-child(6) {
+    animation: line-two-down-enter-station-car-six calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-line-two-down-enter-station > .light:nth-child(7) {
+    animation: line-two-down-enter-station-light calc(var(--turn-complete-time) / var(--play-speed)) linear forwards;
+}
+
+/*动画帧-列车*/
+@keyframes line-two-down-enter-station {
+    0% {
+        top: 337px;
+    }
+    16.67% {
+        top: 360px;
+    }
+    33.33% {
+        top: 383px;
+    }
+    50% {
+        top: 406px;
+    }
+    66.67% {
+        top: 429px;
+    }
+    83.33% {
+        top: 452px;
+    }
+    100% {
+        top: 475px;
+    }
+}
+
+/*动画帧-一号车厢*/
+@keyframes line-two-down-enter-station-car-one {
+    0% {
+        transform: rotateZ(17deg);
+        left: 16px;
+        top: 0.5px;
+    }
+    16.67% {
+        transform: rotateZ(14deg);
+        left: 10px;
+    }
+    33.33% {
+        transform: rotateZ(10deg);
+        left: 5.5px;
+    }
+    50% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    66.67% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    83.33% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-二号车厢*/
+@keyframes line-two-down-enter-station-car-two {
+    0% {
+        transform: rotateZ(14deg);
+        left: 10px;
+    }
+    16.67% {
+        transform: rotateZ(10deg);
+        left: 5.5px;
+    }
+    33.33% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    50% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    66.67% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-三号车厢*/
+@keyframes line-two-down-enter-station-car-three {
+    0% {
+        transform: rotateZ(10deg);
+        left: 5.5px;
+    }
+    16.67% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    33.33% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    50% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-四号车厢*/
+@keyframes line-two-down-enter-station-car-four {
+    0% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    16.67% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    33.33% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    50% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-五号车厢*/
+@keyframes line-two-down-enter-station-car-five {
+    0% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    16.67% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    33.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    50% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-六号车厢*/
+@keyframes line-two-down-enter-station-car-six {
+    0% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    16.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    33.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    50% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    66.67% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    83.33% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        left: 0;
+    }
+}
+
+/*动画帧-前灯*/
+@keyframes line-two-down-enter-station-light {
+    0% {
+        left: 1px;
+    }
+    16.67% {
+        left: 1px;
+    }
+    33.33% {
+        left: 0;
+    }
+    50% {
+        left: 0;
+    }
+    66.67% {
+        left: 0;
+    }
+    83.33% {
+        left: 0;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.west_inner_train.after_enter_station {
+    top: 475px;
+    transform: rotateZ(0deg);
+    transform-origin: 423.5px 138px;
+}
+
+.west_inner_train.after_enter_station > .car{
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}

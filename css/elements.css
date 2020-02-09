@@ -1,0 +1,542 @@
+/*****集庆门大街站 start*****/
+/*站体*/
+#station_jqm {
+    left: 951px;
+    top: 500px;
+    width: 48px;
+    height: 310px;
+}
+
+/*西侧正线外延隧道*/
+#west_line_extra {
+    height: 20px;
+    top: 310px;
+    left: -1px;
+}
+
+/*东侧正线外延隧道*/
+#east_line_extra {
+    height: 20px;
+    top: 310px;
+    left: 42px;
+}
+
+#north_west_well {
+    width: 2px;
+    height: 20px;
+    left: -2px;
+}
+
+#north_east_well {
+    width: 2px;
+    height: 20px;
+    left: 48px;
+}
+
+#south_west_well {
+    width: 2px;
+    height: 20px;
+    left: -2px;
+    top: 290px;
+}
+
+#south_east_well {
+    width: 2px;
+    height: 20px;
+    left: 48px;
+    top: 290px;
+}
+
+/*西站台*/
+#west_platform {
+    left: 4px;
+    bottom: 20px;
+}
+
+/*东站台*/
+#east_platform {
+    right: 4px;
+    bottom: 20px;
+}
+
+/*西外侧正线*/
+#west_outer_line {
+    height: 358px;
+    left: 1.5px;
+    bottom: -20px;
+}
+
+/*西内侧正线*/
+#west_inner_line {
+    height: 316px;
+    left: 16.5px;
+    bottom: 20px;
+}
+
+/*停车线*/
+#park_line {
+    height: 217px;
+    right: 24px;
+    bottom: 30px;
+}
+
+/*东内侧正线*/
+#east_inner_line {
+    height: 317px;
+    right: 16.5px;
+    bottom: 20px;
+}
+
+/*东外侧正线*/
+#east_outer_line {
+    height: 250px;
+    right: 1.5px;
+    bottom: -20px;
+}
+
+/*西侧交叉渡线*/
+#west_cross_over_left {
+    left: 16px;
+    top: 2px;
+    height: 98px;
+}
+
+#west_cross_over_right {
+    left: 2px;
+    top: 2px;
+    height: 98px;
+}
+
+/*停车线交叉渡线*/
+#park_cross_over_left {
+    top: 63px;
+    right: 17px;
+    height: 51px;
+}
+
+#park_cross_over_right {
+    top: 14px;
+    left: 17px;
+    height: 98px;
+}
+
+/*东侧单渡线*/
+#east_cross_over_right {
+    top: 18px;
+    right: 16px;
+    height: 98px;
+}
+
+#station_jqm > .label {
+    position: absolute;
+    font-size: 20px;
+    font-family: 微软雅黑;
+    left: 60px;
+    width: 20px;
+    top: 142px;
+    line-height: 24px;
+    user-select: none;
+}
+
+/*****集庆门大街站 end*****/
+
+/*****集-水区间 start*****/
+#two_nine_whole {
+    height: 25px;
+    width: 7px;
+    top: 475px;
+    left: 950px;
+}
+
+#two_nine_connect {
+    left: 600px;
+    top: 120px;
+}
+
+#two_nine_connect_horizontal {
+    left: 280px;
+    top: 120px;
+    width: 320px;
+}
+
+#connect_curve_line {
+    top: -4px;
+    left: 5px;
+}
+
+#connect_straight_line {
+    width: 325px;
+    top: -4px;
+}
+
+/*****集-水区间 end*****/
+
+/*****集-茶区间 start*****/
+#two_up_whole {
+    height: 25px;
+    width: 22px;
+    top: 475px;
+    left: 964px;
+}
+
+#two_up_left {
+    top: 54px;
+    left: 965px;
+    border-radius: 416px 0 0 0;
+    width: 416px;
+    height: 416px;
+}
+
+#two_up_right {
+    top: 69px;
+    left: 979px;
+}
+
+#line_two_up_left {
+    left: -4px;
+    top: -6px;
+    border-radius: 418px 0 0 0;
+    width: 418px;
+    height: 418px;
+}
+
+#line_two_up_right {
+    left: -4px;
+    top: -7px;
+    width: 403px;
+    height: 403px;
+    border-radius: 403px 0 0 0;
+}
+
+/*****集-茶区间 end*****/
+
+/*****水西门大街站 start*****/
+#station_sxm {
+    left: -30px;
+    top: 107px;
+    width: 310px;
+    height: 32px;
+}
+
+#north_platform {
+    left: 40px;
+    top: 3px;
+}
+
+#south_platform {
+    left: 40px;
+    bottom: 3px;
+}
+
+#connect_line {
+    width: 310px;
+    top: 16px;
+}
+
+#station_sxm > .label {
+    position: absolute;
+    font-size: 20px;
+    font-family: 微软雅黑;
+    left: 57px;
+    height: 20px;
+    top: -30px;
+    user-select: none;
+}
+/*****水西门大街站 end*****/
+
+/*****西内侧列车 start*****/
+.west_inner_train {
+    left: 966px;
+    top: 337px;
+    transform-origin: 423.5px 138px;
+    transform: rotateZ(65deg);
+}
+
+.west_inner_train > .car:nth-child(1) {
+    transform: rotateZ(17deg);
+    left: 16px;
+    top: 0.5px;
+}
+
+.west_inner_train > .car:nth-child(2) {
+    transform: rotateZ(14deg);
+    left: 10px;
+}
+
+.west_inner_train > .car:nth-child(3) {
+    transform: rotateZ(10deg);
+    left: 5.5px;
+}
+
+.west_inner_train > .car:nth-child(4) {
+    transform: rotateZ(7deg);
+    left: 3px;
+}
+
+.west_inner_train > .car:nth-child(5) {
+    transform: rotateZ(5deg);
+    left: 1px;
+}
+
+.west_inner_train > .car:nth-child(6) {
+    transform: rotateZ(0.5deg);
+    left: 1px;
+}
+
+.west_inner_train > .light:nth-child(7) {
+    left: 1px;
+}
+
+.train.west_inner_train > .label {
+    left: 7px;
+}
+
+.train.west_inner_train.reversed {
+    left: 952px;
+}
+
+.train.west_inner_train.reversed .car {
+    left: 14px;
+}
+
+.train.west_inner_train.reversed .light {
+    left: 14px;
+}
+
+.train.west_inner_train.reversed .label {
+    left: 21px;
+}
+
+/*****西内侧列车 end*****/
+
+
+/*****西外侧列车 start*****/
+.west_outer_train {
+    left: 505px;
+    top: 339px;
+    height: 38px;
+    transform: rotateZ(-90deg);
+    transform-origin: -352.5px 138px;
+}
+
+.train.west_outer_train > .label {
+    left: -58px;
+}
+
+/*****西外侧列车 end*****/
+
+/*时钟外框*/
+#clock_panel {
+    position: absolute;
+    left: 645px;
+    top: 400px;
+    width: 250px;
+    height: 38px;
+}
+
+#clock_panel > .label {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    line-height: 38px;
+    font-family: 微软雅黑;
+    user-select: none;
+}
+
+/*时钟显示器*/
+#clock {
+    position: absolute;
+    background: #fff;
+    width: 136px;
+    height: 38px;
+    left: 95px;
+    top: 0;
+    border-radius: 5px;
+    box-shadow: inset #000 0 0 3px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 微软雅黑;
+    user-select: none;
+}
+
+/*播放速度外框*/
+#play_speed_panel {
+    position: absolute;
+    left: 645px;
+    top: 450px;
+    width: 250px;
+    height: 38px;
+}
+
+#play_speed_panel > .label {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    line-height: 38px;
+    font-family: 微软雅黑;
+    user-select: none;
+}
+
+/*播放速度字符串*/
+#play_speed_panel > .speed {
+    position: absolute;
+    width: 136px;
+    height: 15px;
+    left: 95px;
+    top: 25px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 微软雅黑;
+    font-weight: bold;
+    user-select: none;
+}
+
+#speed_label {
+    top: -27px;
+    position: relative;
+    font-size: 20px;
+}
+
+/*按钮*/
+#buttons {
+    position: absolute;
+    left: 749px;
+    top: 520px;
+    width: 100px;
+}
+
+/*播放按钮*/
+button.play {
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 30px;
+}
+
+button.play > .icon {
+    position: absolute;
+    left: 22px;
+    top: 6px;
+    border-top: 7px solid transparent;
+    border-left: 7px solid #fff;
+    border-bottom: 7px solid transparent;
+}
+
+/*重置按钮*/
+button.reset {
+    left: 0;
+    top: 40px;
+    width: 55px;
+    text-align: right;
+}
+
+button.reset > .icon {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid transparent;
+}
+
+button.reset > .icon::after {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: -5px;
+    height: 10px;
+    width: 2px;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+/*暂停按钮*/
+button.pause {
+    left: 65px;
+    top: 40px;
+    width: 55px;
+    text-align: right;
+}
+
+button.pause > .icon {
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    height: 10px;
+    width: 2px;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+}
+
+/*减速按钮*/
+button.slower {
+    left: 7px;
+    top: 0;
+    width: 45px;
+    height: 14px;
+}
+
+button.slower > .icon {
+    position: absolute;
+    left: 16px;
+    top: 1px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid transparent;
+}
+
+button.slower > .icon::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: -4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid transparent;
+}
+
+/*加速按钮*/
+button.faster {
+    right: 7px;
+    top: 0;
+    width: 45px;
+    height: 14px;
+}
+
+button.faster > .icon {
+    position: absolute;
+    left: 16px;
+    top: 1px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid transparent;
+}
+
+button.faster > .icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid transparent;
+}
+
+/*时刻表外框*/
+#time_table_panel {
+    position: absolute;
+    top: 190px;
+    left: 10px;
+    background: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+#time_table_panel > table {
+    width: 300px;
+    border: 1px solid #000;
+    border-spacing: 0;
+    border-collapse: collapse;
+    float: left;
+}

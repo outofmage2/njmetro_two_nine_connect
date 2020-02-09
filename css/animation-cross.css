@@ -1,0 +1,1237 @@
+/*集庆门大街进站通过渡线停车动画及定格*/
+.west_inner_train.animation-cross-to-stop {
+    animation: cross-to-stop calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .car:nth-child(1) {
+    animation: cross-to-stop-car-one calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .car:nth-child(2) {
+    animation: cross-to-stop-car-two calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .car:nth-child(3) {
+    animation: cross-to-stop-car-three calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .car:nth-child(4) {
+    animation: cross-to-stop-car-four calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .car:nth-child(5) {
+    animation: cross-to-stop-car-five calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .car:nth-child(6) {
+    animation: cross-to-stop-car-six calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .light:nth-child(7) {
+    animation: cross-to-stop-light calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.animation-cross-to-stop > .label:nth-child(8) {
+    animation: cross-to-stop-label calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+@keyframes cross-to-stop {
+    0% {
+        top: 337px;
+    }
+    7.09% {
+        top: 364px;
+    }
+    14.18% {
+        top: 387px;
+    }
+    21.28% {
+        top: 410px;
+    }
+    28.37% {
+        top: 433px;
+    }
+    35.46% {
+        top: 456px;
+    }
+    42.55% {
+        top: 479px;
+    }
+    49.64% {
+        top: 502px;
+    }
+    56.74% {
+        top: 525px;
+    }
+    63.83% {
+        top: 548px;
+    }
+    70.92% {
+        top: 571px;
+    }
+    78.01% {
+        top: 594px;
+    }
+    85.1% {
+        top: 617px;
+        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    100% {
+        top: 645px;
+    }
+}
+
+@keyframes cross-to-stop-car-one {
+    0% {
+        transform: rotateZ(17deg);
+        left: 16px;
+        top: 0.5px;
+    }
+    7.09% {
+        transform: rotateZ(14deg);
+        left: 10px;
+    }
+    14.18% {
+        transform: rotateZ(10deg);
+        left: 5.5px;
+    }
+    21.28% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    28.37% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    35.46% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    42.55% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    49.64% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: 0;
+    }
+    56.74% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -3px;
+    }
+    63.83% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -7px;
+    }
+    70.92% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -10px;
+    }
+    78.01% {
+        transform: rotateZ(3.33deg);
+        transform-origin: top;
+        left: -13px;
+    }
+    85.1% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+}
+
+@keyframes cross-to-stop-car-two {
+    0% {
+        transform: rotateZ(14deg);
+        left: 10px;
+    }
+    7.09% {
+        transform: rotateZ(10deg);
+        left: 5.5px;
+    }
+    14.18% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    21.28% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    28.37% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    35.46% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    42.55% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: 0;
+    }
+    49.64% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -3px;
+    }
+    56.74% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -7px;
+    }
+    63.83% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -10px;
+    }
+    70.92% {
+        transform: rotateZ(3.33deg);
+        transform-origin: top;
+        left: -13px;
+    }
+    78.01% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    85.1% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+}
+
+@keyframes cross-to-stop-car-three {
+    0% {
+        transform: rotateZ(10deg);
+        left: 5.5px;
+    }
+    7.09% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    14.18% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    21.28% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    28.37% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    35.46% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: 0;
+    }
+    42.55% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -3px;
+    }
+    49.64% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -7px;
+    }
+    56.74% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -10px;
+    }
+    63.83% {
+        transform: rotateZ(3.33deg);
+        transform-origin: top;
+        left: -13px;
+    }
+    70.92% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    78.01% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    85.1% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+}
+
+@keyframes cross-to-stop-car-four {
+    0% {
+        transform: rotateZ(7deg);
+        left: 3px;
+    }
+    7.09% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    14.18% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    21.28% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    28.37% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: 0;
+    }
+    35.46% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -3px;
+    }
+    42.55% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -7px;
+    }
+    49.64% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -10px;
+    }
+    56.74% {
+        transform: rotateZ(3.33deg);
+        transform-origin: top;
+        left: -13px;
+    }
+    63.83% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    70.92% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    78.01% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    85.1% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+}
+
+@keyframes cross-to-stop-car-five {
+    0% {
+        transform: rotateZ(5deg);
+        left: 1px;
+    }
+    7.09% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    14.18% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    21.28% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: 0;
+    }
+    28.37% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -3px;
+    }
+    35.46% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -7px;
+    }
+    42.55% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -10px;
+    }
+    49.64% {
+        transform: rotateZ(3.33deg);
+        transform-origin: top;
+        left: -13px;
+    }
+    56.74% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    63.83% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    70.92% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    78.01% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    85.1% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+}
+
+@keyframes cross-to-stop-car-six {
+    0% {
+        transform: rotateZ(0.5deg);
+        left: 1px;
+    }
+    7.09% {
+        transform: rotateZ(0deg);
+        left: 0;
+        top: 0;
+    }
+    14.18% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: 0;
+    }
+    21.28% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -3px;
+    }
+    28.37% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -7px;
+    }
+    35.46% {
+        transform: rotateZ(6.33deg);
+        transform-origin: top;
+        left: -10px;
+    }
+    42.55% {
+        transform: rotateZ(3.33deg);
+        transform-origin: top;
+        left: -13px;
+    }
+    49.64% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    56.74% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    63.83% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    70.92% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    78.01% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    85.1% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+    100% {
+        transform: rotateZ(0deg);
+        transform-origin: top;
+        left: -14px;
+    }
+}
+
+@keyframes cross-to-stop-light {
+    0% {
+        left: 0;
+    }
+    7.09% {
+        left: 0;
+    }
+    14.18% {
+        left: -3px;
+        transform: rotate(51.33deg);
+    }
+    21.28% {
+        left: -6px;
+        transform: rotate(51.33deg);
+    }
+    28.37% {
+        left: -10px;
+        transform: rotate(51.33deg);
+    }
+    35.46% {
+        left: -13px;
+        transform: rotate(58.33deg);
+    }
+    42.55% {
+        left: -14px;
+        transform: rotate(45deg);
+    }
+    49.64% {
+        left: -14px;
+    }
+    56.74% {
+        left: -14px;
+    }
+    63.83% {
+        left: -14px;
+    }
+    70.92% {
+        left: -14px;
+    }
+    78.01% {
+        left: -14px;
+    }
+    85.1% {
+        left: -14px;
+    }
+    100% {
+        left: -14px;
+    }
+}
+
+@keyframes cross-to-stop-label {
+    0% {
+        left: 7px;
+    }
+    42.55% {
+        left: 7px;
+        animation-timing-function: cubic-bezier(0.000, 1.000, 0.000, 1.000);
+    }
+    85.1% {
+        left: -72px;
+    }
+    100% {
+        left: -72px;
+    }
+}
+
+.west_inner_train.after_cross_to_stop {
+    transform: rotateZ(0deg);
+    top: 645px;
+}
+
+.west_inner_train.after_cross_to_stop > .car {
+    transform: rotateZ(0deg);
+    transform-origin: top;
+    left: -14px;
+}
+
+.west_inner_train.after_cross_to_stop > .light:nth-child(7) {
+    left: -14px;
+}
+
+.west_inner_train.after_cross_to_stop > .label:nth-child(8) {
+    left: -72px;
+}
+
+/*集庆门大街出站通过渡线出发动画及定格*/
+.west_inner_train.reversed.animation-cross-to-depart {
+    animation: cross-to-depart calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .car:nth-child(1) {
+    animation: cross-to-depart-car-one calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .car:nth-child(2) {
+    animation: cross-to-depart-car-two calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .car:nth-child(3) {
+    animation: cross-to-depart-car-three calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .car:nth-child(4) {
+    animation: cross-to-depart-car-four calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .car:nth-child(5) {
+    animation: cross-to-depart-car-five calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .car:nth-child(6) {
+    animation: cross-to-depart-car-six calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .light:nth-child(7) {
+    animation: cross-to-depart-light calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+.west_inner_train.reversed.animation-cross-to-depart > .label:nth-child(8) {
+    animation: cross-to-depart-label calc(var(--cross-time) / var(--play-speed)) linear forwards;
+}
+
+@keyframes cross-to-depart {
+    0% {
+        top: 645px;
+        animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+    }
+    21.15% {
+        top: 600px;
+    }
+    28.1% {
+        top: 577px;
+    }
+    35.05% {
+        top: 554px;
+    }
+    41.99% {
+        top: 531px;
+    }
+    48.94% {
+        top: 508px;
+    }
+    55.89% {
+        top: 485px;
+    }
+    62.84% {
+        top: 462px;
+    }
+    69.79% {
+        top: 439px;
+    }
+    76.74% {
+        top: 416px;
+    }
+    83.68% {
+        top: 393px;
+    }
+    90.63% {
+        top: 370px;
+    }
+    100% {
+        top: 339px;
+    }
+}
+
+@keyframes cross-to-depart-car-one {
+    0% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    21.15% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    28.1% {
+        left: 14px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    35.05% {
+        left: 11px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    41.99% {
+        left: 7px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    48.94% {
+        left: 4px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    55.89% {
+        left: 1px;
+        transform: rotate(-3.33deg);
+        transform-origin: bottom;
+    }
+    62.84% {
+        left: 0;
+        transform: rotate(-1deg);
+        transform-origin: bottom;
+    }
+    69.79% {
+        left: 0;
+        transform: rotate(-5deg);
+        transform-origin: bottom;
+    }
+    76.74% {
+        left: -2px;
+        transform: rotate(-8deg);
+        transform-origin: bottom;
+    }
+    83.68% {
+        left: -5px;
+        transform: rotate(-12deg);
+        transform-origin: bottom;
+    }
+    90.63% {
+        left: -10px;
+        transform: rotate(-16.5deg);
+        transform-origin: bottom;
+    }
+    100% {
+        left: -17px;
+        top: 1px;
+        transform: rotate(-21deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes cross-to-depart-car-two {
+    0% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    21.15% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    28.1% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    35.05% {
+        left: 14px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    41.99% {
+        left: 11px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    48.94% {
+        left: 7px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    55.89% {
+        left: 4px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    62.84% {
+        left: 1px;
+        transform: rotate(-3.33deg);
+        transform-origin: bottom;
+    }
+    69.79% {
+        left: 0;
+        transform: rotate(-1deg);
+        transform-origin: bottom;
+    }
+    76.74% {
+        left: 0;
+        transform: rotate(-5deg);
+        transform-origin: bottom;
+    }
+    83.68% {
+        left: -2px;
+        transform: rotate(-8deg);
+        transform-origin: bottom;
+    }
+    90.63% {
+        left: -5px;
+        transform: rotate(-12deg);
+        transform-origin: bottom;
+    }
+    100% {
+        left: -10px;
+        transform: rotate(-16.5deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes cross-to-depart-car-three {
+    0% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    21.15% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    28.1% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    35.05% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    41.99% {
+        left: 14px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    48.94% {
+        left: 11px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    55.89% {
+        left: 7px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    62.84% {
+        left: 4px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    69.79% {
+        left: 1px;
+        transform: rotate(-3.33deg);
+        transform-origin: bottom;
+    }
+    76.74% {
+        left: 0;
+        transform: rotate(-1deg);
+        transform-origin: bottom;
+    }
+    83.68% {
+        left: 0;
+        transform: rotate(-5deg);
+        transform-origin: bottom;
+    }
+    90.63% {
+        left: -2px;
+        transform: rotate(-8deg);
+        transform-origin: bottom;
+    }
+    100% {
+        left: -5px;
+        transform: rotate(-12deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes cross-to-depart-car-four {
+    0% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    21.15% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    28.1% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    35.05% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    41.99% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    48.94% {
+        left: 14px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    55.89% {
+        left: 11px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    62.84% {
+        left: 7px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    69.79% {
+        left: 4px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    76.74% {
+        left: 1px;
+        transform: rotate(-3.33deg);
+        transform-origin: bottom;
+    }
+    83.68% {
+        left: 0;
+        transform: rotate(-1deg);
+        transform-origin: bottom;
+    }
+    90.63% {
+        left: 0;
+        transform: rotate(-5deg);
+        transform-origin: bottom;
+    }
+    100% {
+        left: -2px;
+        transform: rotate(-8deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes cross-to-depart-car-five {
+    0% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    21.15% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    28.1% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    35.05% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    41.99% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    48.94% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    55.89% {
+        left: 14px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    62.84% {
+        left: 11px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    69.79% {
+        left: 7px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    76.74% {
+        left: 4px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    83.68% {
+        left: 1px;
+        transform: rotate(-3.33deg);
+        transform-origin: bottom;
+    }
+    90.63% {
+        left: 0;
+        transform: rotate(-1deg);
+        transform-origin: bottom;
+    }
+    100% {
+        left: 0;
+        transform: rotate(-5deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes cross-to-depart-car-six {
+    0% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    21.15% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    28.1% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    35.05% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    41.99% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    48.94% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    55.89% {
+        left: 14px;
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    62.84% {
+        left: 14px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    69.79% {
+        left: 11px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    76.74% {
+        left: 7px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    83.68% {
+        left: 4px;
+        transform: rotate(-6.33deg);
+        transform-origin: bottom;
+    }
+    90.63% {
+        left: 1px;
+        transform: rotate(-3.33deg);
+        transform-origin: bottom;
+    }
+    100% {
+        left: 0;
+        transform: rotate(-1deg);
+        transform-origin: bottom;
+    }
+}
+
+@keyframes cross-to-depart-light {
+    0% {
+        left: 14px;
+    }
+    21.15% {
+        left: 14px;
+    }
+    28.1% {
+        left: 11px;
+        transform: rotate(218.66deg);
+    }
+    35.05% {
+        left: 8px;
+        transform: rotate(218.66deg);
+    }
+    41.99% {
+        left: 4px;
+        transform: rotate(218.66deg);
+    }
+    48.94% {
+        left: 1px;
+        transform: rotate(221.66deg);
+    }
+    55.89% {
+        left: 0;
+        transform: rotate(225deg);
+    }
+    62.84% {
+        left: -1px;
+        top: -138px;
+        transform: rotate(224deg);
+    }
+    69.79% {
+        left: -2px;
+        top: -138px;
+        transform: rotate(220deg);
+    }
+    76.74% {
+        left: -5px;
+        top: -138px;
+        transform: rotate(217deg);
+    }
+    83.68% {
+        left: -10px;
+        top: -138px;
+        transform: rotate(213deg);
+    }
+    90.63% {
+        left: -16px;
+        top: -137px;
+        transform: rotate(210deg);
+    }
+    100% {
+        left: -26px;
+        top: -136px;
+        transform: rotate(204deg);
+    }
+}
+
+@keyframes cross-to-depart-label {
+    0% {
+        left: 21px;
+    }
+    21.15% {
+        left: 21px;
+    }
+    28.1% {
+        left: 18px;
+    }
+    35.05% {
+        left: 15px;
+    }
+    41.99% {
+        left: 11px;
+    }
+    48.94% {
+        left: 8px;
+    }
+    55.89% {
+        left: 7px;
+    }
+    62.84% {
+        left: 7px;
+        transform: rotate(-1deg);
+    }
+    69.79% {
+        transform: rotate(-5deg);
+    }
+    76.74% {
+        transform: rotate(-8deg);
+    }
+    83.68% {
+        left: 2px;
+        top: -7px;
+        transform: rotate(-12deg);
+    }
+    90.63% {
+        left: -7px;
+        top: -11px;
+        transform: rotate(-16.5deg);
+    }
+    100% {
+        left: -16px;
+        top: -14px;
+        transform: rotate(-21deg);
+    }
+}
+
+.west_inner_train.after_cross_to_depart {
+    transform: rotateZ(0deg);
+    top: 339px;
+}
+
+.west_inner_train.after_cross_to_depart > .car:nth-child(1) {
+    left: -17px;
+    top: 1px;
+    transform: rotate(-21deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.after_cross_to_depart > .car:nth-child(2) {
+    left: -10px;
+    transform: rotate(-16.5deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.after_cross_to_depart > .car:nth-child(3) {
+    left: -5px;
+    transform: rotate(-12deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.after_cross_to_depart > .car:nth-child(4) {
+    left: -2px;
+    transform: rotate(-8deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.after_cross_to_depart > .car:nth-child(5) {
+    left: 0;
+    transform: rotate(-5deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.after_cross_to_depart > .car:nth-child(6) {
+    left: 0;
+    transform: rotate(-1deg);
+    transform-origin: bottom;
+}
+
+.west_inner_train.after_cross_to_depart > .light:nth-child(7) {
+    left: -26px;
+    top: -136px;
+    transform: rotate(204deg);
+}
+
+.west_inner_train.after_cross_to_depart > .label:nth-child(8) {
+    left: -16px;
+    top: -14px;
+    transform: rotate(-21deg);
+}

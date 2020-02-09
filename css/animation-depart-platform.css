@@ -1,0 +1,123 @@
+/*西外侧列车水西门大街出站动画及定格样式*/
+
+/*出站动画*/
+.west_outer_train.animation-connect-line-depart-platform {
+    animation: connect-line-down-depart-platform calc((var(--depart-acc-time) + var(--depart-steady-time)) / var(--play-speed)) forwards;
+}
+
+/*动画帧-列车*/
+@keyframes connect-line-down-depart-platform {
+    0% {
+        left: 505px;
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    71.43% {
+        left: 736px;
+        animation-timing-function: linear;
+    }
+    100% {
+        left: 952px;
+    }
+}
+
+/*出站后定格*/
+.west_outer_train.after_depart_platform {
+    left: 952px;
+}
+
+/*西外侧列车集庆门大街出站动画及定格样式*/
+
+/*出站动画*/
+.west_outer_train.animation-disappear,
+.west_inner_train.animation-disappear {
+    animation: disappear calc(var(--depart-acc-time) / var(--play-speed)) forwards;
+}
+
+/*动画帧-列车*/
+@keyframes disappear {
+    0% {
+        top: 645px;
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    100% {
+        top: 876px;
+    }
+}
+
+/*西外侧列车水西门大街停车动画及定格样式*/
+
+/*停车动画*/
+.west_inner_train.reversed.animation-up-stop {
+    animation: up-stop calc((var(--depart-acc-time) + var(--depart-steady-time)) / var(--play-speed)) forwards;
+}
+
+/*动画帧-列车*/
+@keyframes up-stop {
+    0% {
+        left: 952px;
+        animation-timing-function: linear;
+    }
+    28.57% {
+        left: 736px;
+        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    100% {
+        left: 505px;
+    }
+}
+
+/*停车后定格*/
+.west_inner_train.reversed.after_stop_sxm {
+    transform: rotateZ(-90deg);
+    transform-origin: -352px 138px;
+    top: 339px;
+    left: 505px;
+}
+
+.west_inner_train.reversed.after_stop_sxm > .car:nth-child(1) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_stop_sxm > .car:nth-child(2) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_stop_sxm > .car:nth-child(3) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_stop_sxm > .car:nth-child(4) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_stop_sxm > .car:nth-child(5) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_stop_sxm > .car:nth-child(6) {
+    transform: rotateZ(0deg);
+    left: 0;
+    top: 0;
+}
+
+.west_inner_train.reversed.after_stop_sxm > .light:nth-child(7) {
+    left: 0;
+    top: -138px;
+    transform: rotate(225deg);
+}
+
+.west_inner_train.reversed.after_stop_sxm > .label:nth-child(8) {
+    left: 7px;
+    top: 0;
+    transform: rotate(0deg);
+}
